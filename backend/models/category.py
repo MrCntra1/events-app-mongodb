@@ -9,8 +9,8 @@ class Event(BaseModel):
     start_time: datetime
     end_time: datetime
     location: Optional[str] = None
-    username: str  # El usuario que creó el evento
+    username: str  # Quién creó el evento
+    category: Optional[str] = None  # 👈 👈 AÑADIR CATEGORÍA
 
     class Config:
-        populate_by_name = True
-        arbitrary_types_allowed = True
+        validate_by_name = True
